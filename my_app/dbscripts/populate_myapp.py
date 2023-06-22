@@ -1,7 +1,7 @@
 '''
 python manage.py shell
 execute the below command inside the shell
-exec(open('./my_app/dbscripts/populate_my_app.py').read())'''
+exec(open('./my_app/dbscripts/populate_myapp.py').read())'''
 
 from faker import Faker
 from my_app.models import My_app
