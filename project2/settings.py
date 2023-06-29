@@ -15,16 +15,14 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-ENV_FILE_PATH = os.path.join(BASE_DIR, '.env')
+ENV_FILE_PATH = os.path.join(BASE_DIR, '.env ')
 # Take environment variables from .env file
-environ.Env.read_env(ENV_FILE_PATH)
-print(os.environ)
+environ.Env.read_env(ENV_FILE_PATH) 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-kzd)4y5kvy_d@%j-_xq5(93j)8uel-6^d0rj+pg7#o3@9d)eqg'
-
+SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG') == 'on'
 
